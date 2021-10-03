@@ -1,7 +1,5 @@
 require 'pry'
-
 class Song
-
 
 attr_accessor :name, :artist, :genre, :count 
 
@@ -11,14 +9,16 @@ attr_accessor :name, :artist, :genre, :count
 @@genre_count = [] # show number of songs per genre
 @@artist_count = [] #show number of songs each artist is responsible for 
 
-def initialize(name, artist, genre)
-    @name = name
-    @@count += 1
-    @@genres << genre 
-    @@artists << artist
+    def initialize(name, artist, genre)
+        @name = name
+        @artist = artist
+        @@count += 1
+        @@genres << genre 
+        @@artists << artist
 
-  end
+    end
 
+  
   #.count class method---returns the total number of songs created.
 
   #.genres class method---returns array of all unique genres of existing songs,
@@ -28,6 +28,5 @@ def initialize(name, artist, genre)
   #.genre_count class method--- returns hash of genres and the number of songs that are in those genres
 
   #.artist_count class method---returns  hash of artists and number of songs that are by those artists 
-
 
 end 
