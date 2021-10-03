@@ -18,6 +18,8 @@ attr_accessor :name, :artist, :genre, :count
         @@count += 1
         @@genres << genre 
         @@artists << artist
+        #@@genre_count << genre
+        #@@artist_count << artist
         @@all << self
 
     end
@@ -39,17 +41,14 @@ attr_accessor :name, :artist, :genre, :count
     #returns array of all unique genres of existing songs,
 
 
-
-
-    
   def self.genre_count
-    @@genre_count 
+    {}
   end
     #returns hash of genres and the number of songs that are in those genres
 
 
   def self.artist_count
-    @@artist_count
+    {}
   end
   #returns  hash of artists and number of songs that are by those artists 
 
