@@ -38,6 +38,9 @@ attr_accessor :name, :artist, :genre, :count
   end
     #returns array of all unique genres of existing songs,
 
+
+
+
     
   def self.genre_count
     @@genre_count 
