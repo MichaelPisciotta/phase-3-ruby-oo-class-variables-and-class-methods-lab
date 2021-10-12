@@ -42,13 +42,29 @@ attr_accessor :name, :artist, :genre, :count
 
 
   def self.genre_count
-    {}
+    genre_count = {}
+    @@genres.each{ |g| 
+    if genre_count[g]
+     genre_count[g] += 1
+    else
+     genre_count[g] = 1  
+    end
+  }
+     genre_count
   end
     #returns hash of genres and the number of songs that are in those genres
 
 
   def self.artist_count
-    {}
+    artist_count = {}
+    @@artists.each{ |a| 
+    if artist_count[a]
+      artist_count[a] += 1
+    else
+     artist_count[a] = 1  
+    end
+  }
+     artist_count
   end
   #returns  hash of artists and number of songs that are by those artists 
 
